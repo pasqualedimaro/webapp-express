@@ -9,6 +9,7 @@ const handleError = require('./middlewares/handleError')
 const moviesRouter = require('./routers/movies')
 
 
+
 app.use(cors({
     origin: process.env.FE_TEST
 }))
@@ -21,7 +22,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api/movies', moviesRouter)
-
+app.post('/api/movies', moviesRouter);
 
 app.use(handleError);
 app.use(notFound);
