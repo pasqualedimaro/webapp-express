@@ -9,8 +9,6 @@ const handleError = require('./middlewares/handleError')
 const moviesRouter = require('./routers/movies')
 
 
-
-console.log(process.env)
 app.use(cors({
     origin: process.env.FE_TEST
 }))
